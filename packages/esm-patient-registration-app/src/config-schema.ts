@@ -58,6 +58,10 @@ export interface RegistrationConfig {
         dayOfMonth: number;
         month: number;
       };
+      useInternationalCalendars: {
+        enableInternationalCalendars: boolean;
+        locale: string;
+      };
     };
   };
   links: {
@@ -317,6 +321,18 @@ export const esmPatientRegistrationSchema = {
           _type: Type.Number,
           _description: 'The custom month to use on the estimated date of birth i.e 0 = Jan & 11 = Dec',
           _default: 0,
+        },
+      },
+      useInternationalCalendars: {
+        enableInternationalCalendars: {
+          _type: Type.Boolean,
+          _description: 'Whether to use International Calendars on DOB',
+          _default: false,
+        },
+        local: {
+          _type: Type.String,
+          _description: 'Use to select dates in many calendar systems used around the world',
+          _default: 'am-AM-u-ca-ethiopic',
         },
       },
     },

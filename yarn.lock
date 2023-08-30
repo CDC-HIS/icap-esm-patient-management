@@ -1776,6 +1776,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@icap-ethiopia/esm-patient-registration-app@workspace:packages/esm-patient-registration-app":
+  version: 0.0.0-use.local
+  resolution: "@icap-ethiopia/esm-patient-registration-app@workspace:packages/esm-patient-registration-app"
+  dependencies:
+    "@adobe/react-spectrum": ^3.29.0
+    "@carbon/react": ^1.12.0
+    formik: ^2.1.5
+    geopattern: ^1.2.3
+    lodash-es: ^4.17.15
+    react-avatar: ^4.0.0
+    uuid: ^8.3.2
+    webpack: ^5.74.0
+    yup: ^0.29.1
+  peerDependencies:
+    "@openmrs/esm-framework": 5.x
+    dayjs: 1.x
+    react: 18.x
+    react-i18next: 11.x
+    react-router-dom: 6.x
+  languageName: unknown
+  linkType: soft
+
 "@internationalized/date@npm:^3.4.0":
   version: 3.4.0
   resolution: "@internationalized/date@npm:3.4.0"
@@ -4013,28 +4035,6 @@ __metadata:
     webpack: ^5.74.0
     webpack-cli: ^4.10.0
     xlsx: ^0.18.5
-  languageName: unknown
-  linkType: soft
-
-"@openmrs/esm-patient-registration-app@workspace:packages/esm-patient-registration-app":
-  version: 0.0.0-use.local
-  resolution: "@openmrs/esm-patient-registration-app@workspace:packages/esm-patient-registration-app"
-  dependencies:
-    "@adobe/react-spectrum": ^3.29.0
-    "@carbon/react": ^1.12.0
-    formik: ^2.1.5
-    geopattern: ^1.2.3
-    lodash-es: ^4.17.15
-    react-avatar: ^4.0.0
-    uuid: ^8.3.2
-    webpack: ^5.74.0
-    yup: ^0.29.1
-  peerDependencies:
-    "@openmrs/esm-framework": 5.x
-    dayjs: 1.x
-    react: 18.x
-    react-i18next: 11.x
-    react-router-dom: 6.x
   languageName: unknown
   linkType: soft
 

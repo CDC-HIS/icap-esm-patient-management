@@ -7,6 +7,7 @@ import { reportError, useConfig } from '@openmrs/esm-framework';
 import { builtInFields, RegistrationConfig } from '../../config-schema';
 import { CustomField } from './custom-field.component';
 import { AddressComponent } from './address/address-field.component';
+import { ICDobField } from './dob/IC-dob.component';
 
 export interface FieldProps {
   name: string;
@@ -14,6 +15,10 @@ export interface FieldProps {
 
 export function Field({ name }: FieldProps) {
   const config = useConfig() as RegistrationConfig;
+  const {
+    fieldConfigurations: { dateOfBirth },
+  } = useConfig() as RegistrationConfig;
+  const { enableInternationalCalendars } = dateOfBirth.useInternationalCalendars;
   if (
     !(builtInFields as ReadonlyArray<string>).includes(name) &&
     !config.fieldDefinitions.some((def) => def.id == name)
@@ -33,7 +38,7 @@ export function Field({ name }: FieldProps) {
     case 'gender':
       return <GenderField />;
     case 'dob':
-      return <DobField />;
+      return enableInternationalCalendars ? <ICDobField /> : <DobField />;
     case 'address':
       return <AddressComponent />;
     case 'id':
